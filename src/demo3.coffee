@@ -2,8 +2,8 @@ $ = jQuery
 
 class Item extends Backbone.Model
     defaults:
-        part1: "h"
-        part2: "w"
+        part1: "Hello"
+        part2: "World"
 
 class List extends Backbone.Collection
     model:Item
@@ -17,23 +17,23 @@ class ListView extends Backbone.View
 
     initialize: ->
         @collection = new List
-        @collection.bind 'add', @.appendItem
+        @collection.bind 'add', @appendItem
         @counter = 0
-        @.render()
+        @render()
 
     render: =>
         self = @
-        @el.append "<button id='add'>Add item</button>"
-        @el.append "<ul></ul>"
+        $(@el).append "<button id='add'>Add item</button>"
+        $(@el).append "<ul></ul>"
 
     addItem: =>
         @counter++
         item = new Item
-        item.set {part2: item.get('part2') + this.counter}
+        item.set {part2: item.get('part2') + " " + this.counter}
         @collection.add(item)
         
 
     appendItem: (item) =>
-        $('ul', @el).append("<li>" + item.get('part1')  + item.get('part2') + "</li>")
+        $('ul', @el).append("<li>" + item.get('part1')  + " " + item.get('part2') + "</li>")
 
 listView = new ListView
