@@ -22,4 +22,8 @@ _The tutorials below were converted from JavaScript to CoffeeScript_
 
 Thanks
 ------
-Thanks to <a href="https://github.com/jashkenas/coffee-script" target="_blank">Jeremy Ashkenas</a> for reviewing the first demo conversion and making recommendations, and writing Backbone & CoffeeScript of course.
+Thanks to 
+
+<a href="http://arturadib.com/" target="_blank">Artur Adib</a> for writing the demos which were used as inspiration for the conversion.<br/>
+
+<a href="https://github.com/jashkenas/coffee-script" target="_blank">Jeremy Ashkenas</a> for reviewing the first demo conversion and making recommendations, and writing Backbone & CoffeeScript of course.
