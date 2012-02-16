@@ -1,4 +1,5 @@
 $ = jQuery
+
 class ListView extends Backbone.View
     
     el: $('body')
@@ -8,14 +9,15 @@ class ListView extends Backbone.View
 
     initialize: ->
         @counter = 0
-        @.render()
+        @render()
 
     render: =>
-        @el.append("<button id='add'>Add item</button>")
-        @el.append("<ul></ul>")
+        $(@el).append("<button id='add'>Add item</button>")
+        $(@el).append("<ul></ul>")
 
     addItem: =>
         @counter++
-        $('ul', @el).append("<li>hw" + @counter + "</li>")
+        $('ul', @el).append("<li>Hello World " + @counter + "</li>")
+
 
 listView = new ListView
